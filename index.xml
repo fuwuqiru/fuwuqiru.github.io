@@ -7,14 +7,56 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 29 Dec 2023 14:08:18 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 29 Dec 2023 14:08:30 +0800</lastBuildDate>
     <atom:link href="https://fuwuqiru.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GitHub-picgo-设置免费图床</title>
+      <link>https://fuwuqiru.github.io/posts/2023/12/github-picgo-%E8%AE%BE%E7%BD%AE%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A/</link>
+      <pubDate>Fri, 29 Dec 2023 14:08:18 +0800</pubDate>
+      <guid>https://fuwuqiru.github.io/posts/2023/12/github-picgo-%E8%AE%BE%E7%BD%AE%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A/</guid>
+      <description>&lt;p&gt;如果博客中含大量图片，使用图床会明显提高加载速度。&lt;/p&gt;&#xA;&lt;p&gt;这里采用GitHub+picgo的方法将GitHub作为一个免费图床，毕竟，谁不喜欢白嫖呢？&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Hello World</title>
       <link>https://fuwuqiru.github.io/posts/2023/12/hello-world/</link>
       <pubDate>Fri, 29 Dec 2023 14:08:18 +0800</pubDate>
       <guid>https://fuwuqiru.github.io/posts/2023/12/hello-world/</guid>
       <description></description>
+    </item>
+    <item>
+      <title>HEXO-NEXT-主题美化</title>
+      <link>https://fuwuqiru.github.io/posts/2023/12/hexo-next-%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/</link>
+      <pubDate>Fri, 29 Dec 2023 14:08:18 +0800</pubDate>
+      <guid>https://fuwuqiru.github.io/posts/2023/12/hexo-next-%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/</guid>
+      <description>&lt;p&gt;建好网站之后第一件事是什么？写博客？no no no，当然是换皮肤啦~~~&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>HEXO-NEXT-主题美化化之花活儿</title>
+      <link>https://fuwuqiru.github.io/posts/2023/12/hexo-next-%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E5%8C%96%E4%B9%8B%E8%8A%B1%E6%B4%BB%E5%84%BF/</link>
+      <pubDate>Fri, 29 Dec 2023 14:08:18 +0800</pubDate>
+      <guid>https://fuwuqiru.github.io/posts/2023/12/hexo-next-%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E5%8C%96%E4%B9%8B%E8%8A%B1%E6%B4%BB%E5%84%BF/</guid>
+      <description>&lt;p&gt;上一篇是一些基础的配置修改，在&lt;code&gt;next.yml&lt;/code&gt;中还内置了很多功能，可以自行查看修改。&lt;/p&gt;&#xA;&lt;p&gt;这篇介绍一些花里胡哨的修改，我们称之为&lt;code&gt;花活儿&lt;/code&gt;。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>HEXO建站指南</title>
+      <link>https://fuwuqiru.github.io/posts/2023/12/hexo%E5%BB%BA%E7%AB%99%E6%8C%87%E5%8D%97/</link>
+      <pubDate>Fri, 29 Dec 2023 14:08:18 +0800</pubDate>
+      <guid>https://fuwuqiru.github.io/posts/2023/12/hexo%E5%BB%BA%E7%AB%99%E6%8C%87%E5%8D%97/</guid>
+      <description>&lt;p&gt;之前一直有自己写个博客的想法，但是因为拖延症的原因一直延误至今，暑假的时候花了半天时间研究了一下，发现有很成熟的解决方案，静态博客用html+css写的话十分方便，于是就建了自己的第一个博客网站，中间也踩了一些坑，把整个过程写在下面。&lt;/p&gt;&#xA;&lt;p&gt;(ps：建好博客之后，我拖了半个月才开始写这第一篇博客:))&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>my_2021</title>
+      <link>https://fuwuqiru.github.io/posts/2023/12/my_2021/</link>
+      <pubDate>Fri, 29 Dec 2023 14:08:18 +0800</pubDate>
+      <guid>https://fuwuqiru.github.io/posts/2023/12/my_2021/</guid>
+      <description>&lt;p&gt;2021是平平淡淡的一年，但是遇见了嘉然，所以2021又是幸运的&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>关于Hexo推送异常的解决办法</title>
+      <link>https://fuwuqiru.github.io/posts/2023/12/%E5%85%B3%E4%BA%8Ehexo%E6%8E%A8%E9%80%81%E5%BC%82%E5%B8%B8%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</link>
+      <pubDate>Fri, 29 Dec 2023 14:08:18 +0800</pubDate>
+      <guid>https://fuwuqiru.github.io/posts/2023/12/%E5%85%B3%E4%BA%8Ehexo%E6%8E%A8%E9%80%81%E5%BC%82%E5%B8%B8%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid>
+      <description>bug描述：博客本地预览正常，线上查看出现样式错误和样式缺失&#xA;解决办法：清楚浏览器缓存，shift + F5强制刷新即可</description>
     </item>
   </channel>
 </rss>

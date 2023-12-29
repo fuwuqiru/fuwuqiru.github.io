@@ -10,6 +10,29 @@
         <atom:link href="https://fuwuqiru.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
+            <title>GitHub-picgo-设置免费图床</title>
+            <link>https://fuwuqiru.github.io/posts/2023/12/github-picgo-%E8%AE%BE%E7%BD%AE%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A/</link>
+            <pubDate>Fri, 29 Dec 2023 14:08:18 +0800</pubDate>
+            
+            <guid>https://fuwuqiru.github.io/posts/2023/12/github-picgo-%E8%AE%BE%E7%BD%AE%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A/</guid>
+            <description>&lt;p&gt;如果博客中含大量图片，使用图床会明显提高加载速度。&lt;/p&gt;
+&lt;p&gt;这里采用GitHub+picgo的方法将GitHub作为一个免费图床，毕竟，谁不喜欢白嫖呢？&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<p>如果博客中含大量图片，使用图床会明显提高加载速度。</p>
+<p>这里采用GitHub+picgo的方法将GitHub作为一个免费图床，毕竟，谁不喜欢白嫖呢？</p>
+<p>首先在GitHub中创建一个新的仓库，可以取名为images或者其他，仓库类型需要为<code>public</code>。</p>
+<p>点击头像选择<code>settings</code>，然后选择<code>Developer settings</code></p>
+<p>选择<code>Personal acess tokens</code>，生成一个新的token。</p>
+<p><img src="https://raw.githubusercontent.com/fuwuqiru/image/master/images/2020_0720200710223446.png" alt=""></p>
+<p>填写备注，勾选repo即可，提交后会生成一个新的token，记得保存下来，只会显示一次，后面配置Picgo要用到。</p>
+<p><img src="https://raw.githubusercontent.com/fuwuqiru/image/master/images/2020_0720200710223846.png" alt=""></p>
+<p>然后下载并安装<a href="https://github.com/Molunerfinn/picgo/releases">PicGo</a>，安装后运行界面如下：</p>
+<p><img src="https://raw.githubusercontent.com/fuwuqiru/image/master/images/2020_0720200710224031.png" alt=""></p>
+<p>然后点击图床设置，填写相应信息。</p>
+<p><img src="https://raw.githubusercontent.com/fuwuqiru/image/master/images/2020_0720200710224143.png" alt=""></p>
+<p>设置完成，这样将图片直接上传后相应<code>url</code>就会直接生成在剪切板中，直接复制即可。</p>]]></content>
+        </item>
+        
+        <item>
             <title>Hello World</title>
             <link>https://fuwuqiru.github.io/posts/2023/12/hello-world/</link>
             <pubDate>Fri, 29 Dec 2023 14:08:18 +0800</pubDate>
@@ -17,6 +40,1080 @@
             <guid>https://fuwuqiru.github.io/posts/2023/12/hello-world/</guid>
             <description></description>
             <content type="html"><![CDATA[]]></content>
+        </item>
+        
+        <item>
+            <title>HEXO-NEXT-主题美化</title>
+            <link>https://fuwuqiru.github.io/posts/2023/12/hexo-next-%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/</link>
+            <pubDate>Fri, 29 Dec 2023 14:08:18 +0800</pubDate>
+            
+            <guid>https://fuwuqiru.github.io/posts/2023/12/hexo-next-%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/</guid>
+            <description>&lt;p&gt;建好网站之后第一件事是什么？写博客？no no no，当然是换皮肤啦~~~&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<p>建好网站之后第一件事是什么？写博客？no no no，当然是换皮肤啦~~~</p>
+<h3 id="安装next">安装NEXT</h3>
+<p>Hexo搭完框架之后显示的是默认主题，可以自行更换<a href="https://hexo.io/themes/">主题</a>。这里我选择的主题是NEXT，这款主题用的人比较多，所以如果你遇到什么问题，基本都可以在网上找到解决方案。</p>
+<p>进入blog文件夹，Git Bash Here，输入</p>
+<pre tabindex="0"><code>git clone https://github.com/theme-next/hexo-theme-next themes/next
+</code></pre><p>即可安装NEXT</p>
+<h3 id="设置hexo的next主题">设置Hexo的next主题</h3>
+<p>在站点配置文件_config.yml中找到theme后添加：</p>
+<pre tabindex="0"><code>theme: next  # 配置成刚下载的next主题
+</code></pre><h3 id="配置hexo网站相关信息">配置hexo网站相关信息</h3>
+<p>在站点配置文件_config.yml中修改：</p>
+<pre tabindex="0"><code># Site
+title:          # 网站标题
+subtitle:       # 网站副标题
+description:    # 描述，介绍网站的
+keywords:       # 网站的关键字
+author:         # 博主姓名
+language: zh-CN # 语言：zh-CN 是简体中文
+timezone: &#39;Asia/Shanghai&#39;   # 时区
+</code></pre><h3 id="主题配置">主题配置</h3>
+<p>next在配置主题的过程中通常会遇到的一个问题就是，next中间有过一次大版本更新，配置主题的方式发生了一些变化，譬如很多教程提到的为博客更换背景图片需要在文件夹_custom中操作，而更新后的next是没有这个文件夹的，这里介绍一下新版本next的配置方式。</p>
+<ol>
+<li>在hexo/source/_data目录创建next.yml(如果 _data不存在，则创建目录)。</li>
+<li>将blog/themes/next/config.yml 中的所有内容复制到 hexo/source/data/next.yml 中</li>
+<li>在next.yml中设置override选项为true</li>
+</ol>
+<p>之后所有的主题配置操作都在next.yml中完成。</p>
+<h4 id="配置菜单">配置菜单</h4>
+<p>默认的主题配置文件中，菜单只开启了首页和归档，我们根据需要，可以添加其他菜单，在配置文件中将对应选项取消注释即可。</p>
+<pre tabindex="0"><code># 菜单设置为 菜单名: /菜单目录 || 菜单图标名字
+menu:
+  home: / || home
+  about: /about/ || user
+  tags: /tags/ || tags
+  categories: /categories/ || th
+  archives: /archives/ || archive
+  #schedule: /schedule/ || calendar
+  sitemap: /sitemap.xml || sitemap
+  commonweal: /404/ || heartbeat
+
+menu_settings:
+  icons: true   # 显示图标
+  badges: true  # 显示统计信息
+</code></pre><p>注：hexo所有图标均来自<a href="https://fontawesome.com/6?next=%2F">fontawesome</a>，其中 | | 后面是你想要设置的图标的名字，如果你想要更换图标，可以在网站上搜索你想要的图标，替换相应名称即可。</p>
+<h4 id="手动生成hexo菜单对应文件">手动生成hexo菜单对应文件</h4>
+<p>新菜单开启后是没有对应文件的，所以要手动生成about、tags、categories、404等页面。</p>
+<h5 id="新建about页面">新建<code>about</code>页面</h5>
+<p><code>about</code>页面一般用来介绍站点信息和博主信息。</p>
+<p>我们可以输入以下命令新建页面</p>
+<pre tabindex="0"><code>hexo new page about
+</code></pre><p>然后你就会发现多了一个hexo / source / about 文件夹，里面有一个<code>index.md</code>文件，你可以根据自己的需要在这个Markdown文件中写一些内容（同文章一样，用Markdown语法）。</p>
+<h5 id="新建一个tags页面">新建一个<code>tags</code>页面</h5>
+<p>同样的，我们也可以新建 <code>tags</code> 页面：</p>
+<pre tabindex="0"><code>hexo new page tags
+</code></pre><p>在 <code>tags</code> 页面文件 <code>hexo / source / tags / index.md</code>的头部修改为：</p>
+<pre tabindex="0"><code>---
+title: 标签
+date: 2019-06-29 11:35:42   # 时间随意
+type: &#34;tags&#34;                # 类型一定要为tags
+comments: false             # 提示这个页面不需要加载评论
+---
+</code></pre><h5 id="新建一个categories页面">新建一个<code>categories</code>页面</h5>
+<p>同样的，我们可以新建<code>categories</code>页面：</p>
+<pre tabindex="0"><code>hexo new page categories
+</code></pre><p>在<code>categories</code>页面文件 <code>hexo / source / categories / index.md</code> 的头部修改为：</p>
+<pre tabindex="0"><code>---
+title: 文章分类
+date: 2018-10-15 00:03:57
+type: &#34;categories&#34;
+comments: false
+---
+</code></pre><h5 id="新建一个404页面">新建一个404页面</h5>
+<p>这里我们将 404 替换成腾讯的公益页面。</p>
+<p>首先我们在 <code>hexo / source</code>目录下创建自己的<code>404.html</code>：</p>
+<pre tabindex="0"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;en&#34;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&#34;UTF-8&#34;&gt;
+        &lt;title&gt;404&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;script type=&#34;text/javascript&#34; src=&#34;//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js&#34; charset=&#34;utf-8&#34; homePageUrl=&#34;/&#34; homePageName=&#34;返回&#34;&gt;&lt;/script&gt; 
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><blockquote>
+<p>注意：Hexo 博客的基本内容是一些 Markdown 文件，放在 <code>source/_post</code> 文件夹下，每个文件对应一篇文章。除此之外，放在 source 文件夹下的所有开头不是下划线的文件，在 <code>hexo generate</code> 的时候，都会被拷贝到 public 文件夹下。但是，Hexo 默认会渲染所有的 HTML 和 Markdown 文件。</p>
+</blockquote>
+<p>因此我们可以简单地在开头加上<code>layout：false</code>一行来避免渲染。</p>
+<p>这样我们就完成了404页面的创建。</p>
+<p>注意：本地测试不出来，发不出来就可以了。</p>
+<h4 id="配置hexo本地搜索">配置hexo本地搜索</h4>
+<p>首先安装插件</p>
+<pre tabindex="0"><code>npm install hexo-generator-searchdb --save
+</code></pre><p>然后在站点配置文件<code>_config.yml</code>中添加以下内容</p>
+<pre tabindex="0"><code># 本地搜索
+search:
+  path: search.xml  # 索引文件的路径，相当于站点根目录
+  field: post  # 搜索范围，默认是post，还可以选择page、all，设置成all表示搜索所有界面
+  format: html
+  limit: 100  # 限制搜索的条目数
+</code></pre><p>然后修改主题配置文件</p>
+<pre tabindex="0"><code># Local Search
+# Dependencies: https://github.com/theme-next/hexo-generator-searchdb
+local_search:
+  enable: true
+  # If auto, trigger search by changing input.
+  # If manual, trigger search by pressing enter key or search button.
+  trigger: auto
+  # Show top n results per article, show all results by setting to -1
+  top_n_per_article: 1
+  # Unescape html strings to the readable one.
+  unescape: false
+  # Preload the search data when the page loads.
+  preload: false
+</code></pre><h4 id="配置博客底部显示信息">配置博客底部显示信息</h4>
+<p>通过修改<code>next.yml</code>中的<code>footer</code>选项可以修改底部开关显示hexo信息、theme信息、建站时间等个性化配置。</p>
+<pre tabindex="0"><code>footer:
+  since: 2018        # 建站开始时间
+  icon:
+    name: user       # 设置 建站初始时间和至今时间中间的图标，默认是一个&#39;小人像&#39;，更改user为heart可以变成一个心
+    animated: true
+    color: &#34;#808080&#34; # 更改图标的颜色，红色为&#39;#ff0000&#39;
+  powered:
+    enable: true     # 开启hexo驱动
+    version: true    # 开启hexo版本号
+  theme:
+    enable: true     # 开启主题驱动
+    version: true    # 开启主题版本号
+  custom_text: Hosted by &lt;a target=&#34;_blank&#34; rel=&#34;external nofollow&#34; href=&#34;https://pages.coding.me&#34;&gt;&lt;b&gt;Coding Pages&lt;/b&gt;&lt;/a&gt; # 这里的底部标识是为了添加coding page服务时的版权声明 打开注释就可以看到底部有一个 hosted by coding pages
+</code></pre><h4 id="配置hexo中next主题样式选择">配置hexo中next主题样式选择</h4>
+<p>NexT一共提供了4种首页样式可供选择，取消所选的主题样式前<code>#</code>号并注释掉其他样式即可。</p>
+<pre tabindex="0"><code># Schemes
+#scheme: Muse
+#scheme: Mist
+#scheme: Pisces
+scheme: Gemini
+</code></pre><h4 id="头像信息设置">头像信息设置</h4>
+<p>在<code>next.yml</code>中修改配置</p>
+<pre tabindex="0"><code>avatar:
+  url: /images/avatar.jpg  # 设置头像资源的位置
+  rounded: true            # 开启圆形头像
+  opacity: 1               # 不透明的比例：0就是完全透明
+  rotated: false           # 不开启旋转
+</code></pre><blockquote>
+<p>这里解释一下，博客中的图片资源有两种引用方式，一种是放在本地的<code>blog/themes/next/source/images</code>文件夹中，引用时填写存储路径即可。第二种方式是将图片上传到图床中，引用时填写图片的 url 。如果图片少的话可以放在本地，但是如果图片较多，就是导致网站打开速度变慢等问题，后面会介绍将GitHub作为图床的方法。</p>
+</blockquote>
+<h4 id="背景图片设置">背景图片设置</h4>
+<p>将你的背景图片放入上述的文件夹中，然后再<code>_data</code>目录下新建<code>styles.styl</code>文件，添加：</p>
+<pre tabindex="0"><code>body {
+    background:url(/images/yourbackground.jpg);  # 图片路径
+    background-repeat: no-repeat;  # 若背景图片不能全屏，那么是否平铺显示，充满屏幕
+    background-attachment:fixed;  # 背景是否随着网页上下滚动而滚动，fixed为固定
+    background-size: cover;  # 图片展示大小，这里设置为100%，若图片不能全屏，就会强制拉伸至全屏展示
+    background-position:50% 50%;
+}
+</code></pre><h4 id="博客内容透明化">博客内容透明化</h4>
+<p>在<code>styles.styl</code>中添加以下内容：</p>
+<pre tabindex="0"><code>//博客内容透明化
+//文章内容的透明度设置
+.content-wrap {
+  opacity: 0.9;
+}
+
+//侧边框的透明度设置
+.sidebar {
+  opacity: 0.9;
+}
+
+//菜单栏的透明度设置
+.header-inner {
+  background: rgba(255,255,255,0.9);
+}
+
+//搜索框（local-search）的透明度设置
+.popup {
+  opacity: 0.9;
+}
+</code></pre><blockquote>
+<p>注意，这里设置完之后要看一下<code>next.yml</code>中对应的选项是否已经取消注释，如果选项被注释掉的话，这里的配置文件是不会生效的。</p>
+</blockquote>
+<h4 id="社交信息">社交信息</h4>
+<p>和菜单设置格式一样，在<code>next.yml</code>中修改：</p>
+<pre tabindex="0"><code>social: 
+  GitHub: https://github.com/yourname || github
+  E-Mail: mailto:yourname@gmail.com || envelope
+  Google: https://plus.google.com/yourname || google
+
+social_icons:
+  enable: true      # 显示社交图标
+  icons_only: false # 只显示图标，不显示文字
+</code></pre><h4 id="首页文章属性">首页文章属性</h4>
+<pre tabindex="0"><code>post_meta:
+  item_text: false    # 设为true 可以一行显示，文章的所有属性
+  created_at: true    # 显示创建时间
+  updated_at:
+    enabled: true     # 显示修改的时间
+    another_day: true # 设true时，如果创建时间和修改时间一样则显示一个时间
+  categories: true    # 显示分类信息
+</code></pre><h4 id="页面阅读统计">页面阅读统计</h4>
+<pre tabindex="0"><code>busuanzi_count:
+  enable: false              # 设true 开启
+  total_visitors: true       # 总阅读人数（uv数）
+  total_visitors_icon: user  # 阅读总人数的图标
+  total_views: true          # 总阅读次数（pv数）
+  total_views_icon: eye      # 阅读总次数的图标
+  post_views: true           # 开启内容阅读次数
+  post_views_icon: eye       # 内容页阅读数的图标
+</code></pre><h4 id="字数统计阅读时长">字数统计、阅读时长</h4>
+<p>首先安装插件</p>
+<pre tabindex="0"><code>npm install hexo-symbols-count-time --save
+</code></pre><p>主题配置文件<code>next.yml</code>修改如下：</p>
+<pre tabindex="0"><code>symbols_count_time:
+  separated_meta: true  # false会显示一行
+  item_text_post: true  # 显示属性名称,设为false后只显示图标和统计数字,不显示属性的文字
+  item_text_total: true # 底部footer是否显示字数统计属性文字
+  awl: 4                # 计算字数的一个设置,没设置过
+  wpm: 275              # 一分钟阅读的字数
+</code></pre><p>站点配置文件<code>_config.yml</code>新增如下：</p>
+<pre tabindex="0"><code>symbols_count_time:
+ #文章内是否显示
+  symbols: true
+  time: true
+ # 网页底部是否显示
+  total_symbols: true
+  total_time: true
+</code></pre><h4 id="代码块复制按钮">代码块复制按钮</h4>
+<pre tabindex="0"><code>codeblock:
+  # Code Highlight theme
+  # Available values: normal | night | night eighties | night blue | night bright | solarized | solarized dark | galactic
+  # See: https://github.com/chriskempson/tomorrow-theme
+  highlight_theme: normal
+  # Add copy button on codeblock
+  copy_button:
+    enable: true  # 开启复制按钮
+    # Show text copy result.
+    show_result: true  # 显示复制结果
+    # Available values: default | flat | mac
+    style: default
+</code></pre><h4 id="中文翻译">中文翻译</h4>
+<p>这部分原来是在配置主题下的<code>language</code>目录中的<code>zh-CN.yml</code>文件来对菜单进行中文翻译的，现在在<code>hexo/source/_data/</code>下新建数据文件<code>language.yml</code>，配置如下：</p>
+<pre tabindex="0"><code>zh-CN: 
+  menu:
+    home: 首页
+    top: 热榜
+    archives: 归档
+    categories: 分类
+    tags: 标签
+    about: 关于
+    search: 搜索
+    schedule: 日程表
+    sitemap: 站点地图
+    commonweal: 公益 404
+    movies: 观影
+    books: 阅读
+</code></pre><blockquote>
+<p>如果后面新增添了别的菜单选项，可以在这里添加新的翻译</p>
+</blockquote>
+<h4 id="其他">其他</h4>
+<p>注意<code>next.yml</code>中的这一段代码</p>
+<pre tabindex="0"><code>custom_file_path:
+  #head: source/_data/head.swig
+  #header: source/_data/header.swig
+  sidebar: source/_data/sidebar.swig
+  #postMeta: source/_data/post-meta.swig
+  #postBodyEnd: source/_data/post-body-end.swig
+  footer: source/_data/footer.swig
+  bodyEnd: source/_data/body-end.swig
+  variable: source/_data/variables.styl
+  #mixin: source/_data/mixins.styl
+  style: source/_data/styles.styl
+</code></pre><p>这些配置原来都是在主题配置内完成的，版本更新后我们如果要修改相应配置，就新建相应的文件放在<code>_data</code>目录下，然后在这一段代码中取消相应的注释即可。</p>
+<h4 id="如圆角设置">如：圆角设置</h4>
+<p>在<code>_data</code>目录下新建<code>variables.styl</code>文件，在文件中添加：</p>
+<pre tabindex="0"><code>// 圆角设置
+$border-radius-inner     = 20px 20px 20px 20px;
+$border-radius           = 20px;
+</code></pre><p>然后取消<code>next.yml</code>中<code>variable</code>的注释。</p>
+<p>在设置圆角之后可能会出现左侧侧边栏出现白块的问题，解决方法为在<code>source/_data/styles.styl</code>中（若没有该文件则新建一个）添加如下代码：</p>
+<pre tabindex="0"><code>.sidebar {
+box-shadow: none
+background: none
+}
+</code></pre>]]></content>
+        </item>
+        
+        <item>
+            <title>HEXO-NEXT-主题美化化之花活儿</title>
+            <link>https://fuwuqiru.github.io/posts/2023/12/hexo-next-%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E5%8C%96%E4%B9%8B%E8%8A%B1%E6%B4%BB%E5%84%BF/</link>
+            <pubDate>Fri, 29 Dec 2023 14:08:18 +0800</pubDate>
+            
+            <guid>https://fuwuqiru.github.io/posts/2023/12/hexo-next-%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E5%8C%96%E4%B9%8B%E8%8A%B1%E6%B4%BB%E5%84%BF/</guid>
+            <description>&lt;p&gt;上一篇是一些基础的配置修改，在&lt;code&gt;next.yml&lt;/code&gt;中还内置了很多功能，可以自行查看修改。&lt;/p&gt;
+&lt;p&gt;这篇介绍一些花里胡哨的修改，我们称之为&lt;code&gt;花活儿&lt;/code&gt;。&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<p>上一篇是一些基础的配置修改，在<code>next.yml</code>中还内置了很多功能，可以自行查看修改。</p>
+<p>这篇介绍一些花里胡哨的修改，我们称之为<code>花活儿</code>。</p>
+<h3 id="粒子时钟特效">粒子时钟特效</h3>
+<p>在<code>hexo/source/_data/sidebar.swig</code>中添加粒子时钟的js代码(若没有则新建文件)</p>
+<pre tabindex="0"><code>&lt;div style=&#34;&#34;&gt;
+  &lt;canvas id=&#34;canvas&#34; style=&#34;width:60%;&#34;&gt;当前浏览器不支持canvas，请更换浏览器后再试&lt;/canvas&gt;
+&lt;/div&gt;
+&lt;script&gt;
+(function(){
+
+   var digit=
+    [
+        [
+            [0,0,1,1,1,0,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,0,1,1,0],
+            [0,0,1,1,1,0,0]
+        ],//0
+        [
+            [0,0,0,1,1,0,0],
+            [0,1,1,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [1,1,1,1,1,1,1]
+        ],//1
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,1,1],
+            [1,1,1,1,1,1,1]
+        ],//2
+        [
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//3
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,0],
+            [0,0,1,1,1,1,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,1,1,0],
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,1]
+        ],//4
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,1,1,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//5
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//6
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0]
+        ],//7
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//8
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,1,1,0,0,0,0]
+        ],//9
+        [
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0]
+        ]//:
+    ];
+
+var canvas = document.getElementById(&#39;canvas&#39;);
+
+if(canvas.getContext){
+    var cxt = canvas.getContext(&#39;2d&#39;);
+    //声明canvas的宽高
+    var H = 100,W = 700;
+    canvas.height = H;
+    canvas.width = W;
+    cxt.fillStyle = &#39;#f00&#39;;
+    cxt.fillRect(10,10,50,50);
+
+    //存储时间数据
+    var data = [];
+    //存储运动的小球
+    var balls = [];
+    //设置粒子半径
+    var R = canvas.height/20-1;
+    (function(){
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        //存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成
+        data.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+    })();
+
+    /*生成点阵数字*/
+    function renderDigit(index,num){
+        for(var i = 0; i &lt; digit[num].length; i++){
+            for(var j = 0; j &lt; digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    cxt.beginPath();
+                    cxt.arc(14*(R+2)*index + j*2*(R+1)+(R+1),i*2*(R+1)+(R+1),R,0,2*Math.PI);
+                    cxt.closePath();
+                    cxt.fill();
+                }
+            }
+        }
+    }
+
+    /*更新时钟*/
+    function updateDigitTime(){
+        var changeNumArray = [];
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        var NewData = [];
+        NewData.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+        for(var i = data.length-1; i &gt;=0 ; i--){
+            //时间发生变化
+            if(NewData[i] !== data[i]){
+                //将变化的数字值和在data数组中的索引存储在changeNumArray数组中
+                changeNumArray.push(i+&#39;_&#39;+(Number(data[i])+1)%10);
+            }
+        }
+        //增加小球
+        for(var i = 0; i&lt; changeNumArray.length; i++){
+            addBalls.apply(this,changeNumArray[i].split(&#39;_&#39;));
+        }
+        data = NewData.concat();
+    }
+
+    /*更新小球状态*/
+    function updateBalls(){
+        for(var i = 0; i &lt; balls.length; i++){
+            balls[i].stepY += balls[i].disY;
+            balls[i].x += balls[i].stepX;
+            balls[i].y += balls[i].stepY;
+            if(balls[i].x &gt; W + R || balls[i].y &gt; H + R){
+                balls.splice(i,1);
+                i--;
+            }
+        }
+    }
+
+    /*增加要运动的小球*/
+    function addBalls(index,num){
+        var numArray = [1,2,3];
+        var colorArray =  [&#34;#3BE&#34;,&#34;#09C&#34;,&#34;#A6C&#34;,&#34;#93C&#34;,&#34;#9C0&#34;,&#34;#690&#34;,&#34;#FB3&#34;,&#34;#F80&#34;,&#34;#F44&#34;,&#34;#C00&#34;];
+        for(var i = 0; i &lt; digit[num].length; i++){
+            for(var j = 0; j &lt; digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    var ball = {
+                        x:14*(R+2)*index + j*2*(R+1)+(R+1),
+                        y:i*2*(R+1)+(R+1),
+                        stepX:Math.floor(Math.random() * 4 -2),
+                        stepY:-2*numArray[Math.floor(Math.random()*numArray.length)],
+                        color:colorArray[Math.floor(Math.random()*colorArray.length)],
+                        disY:1
+                    };
+                    balls.push(ball);
+                }
+            }
+        }
+    }
+
+    /*渲染*/
+    function render(){
+        //重置画布宽度，达到清空画布的效果
+        canvas.height = 100;
+        //渲染时钟
+        for(var i = 0; i &lt; data.length; i++){
+            renderDigit(i,data[i]);
+        }
+        //渲染小球
+        for(var i = 0; i &lt; balls.length; i++){
+            cxt.beginPath();
+            cxt.arc(balls[i].x,balls[i].y,R,0,2*Math.PI);
+            cxt.fillStyle = balls[i].color;
+            cxt.closePath();
+            cxt.fill();
+        }
+    }
+
+    clearInterval(oTimer);
+    var oTimer = setInterval(function(){
+        //更新时钟
+        updateDigitTime();
+        //更新小球状态
+        updateBalls();
+        //渲染
+        render();
+    },50);
+}
+
+})();
+&lt;/script&gt;
+</code></pre><h3 id="hexo加入豆瓣读书页面">Hexo加入豆瓣读书页面</h3>
+<p>首先安装模块<a href="https://github.com/mythsman/hexo-douban">hexo_douban</a></p>
+<pre tabindex="0"><code>npm install hexo-douban --save
+</code></pre><p>将下面的配置写入站点的配置文件<code>config.yml</code>中</p>
+<pre tabindex="0"><code>douban:
+  user: mythsman
+  builtin: false
+  book:
+    title: &#39;This is my book title&#39;
+    quote: &#39;This is my book quote&#39;
+  movie:
+    title: &#39;This is my movie title&#39;
+    quote: &#39;This is my movie quote&#39;
+  game:
+    title: &#39;This is my game title&#39;
+    quote: &#39;This is my game quote&#39;
+  timeout: 10000
+</code></pre><blockquote>
+<ul>
+<li>user: 你的豆瓣 ID. 打开豆瓣，登入账户，然后在右上角点击 “个人主页” ，这时候地址栏的 URL 大概是这样：”<code>https://www.douban.com/people/xxxxxx/</code>“，其中的”xxxxxx” 就是你的个人 ID 了。</li>
+<li>builtin: 是否将生成页面的功能嵌入 <code>hexo s</code> 和 <code>hexo g</code> 中，默认是 false, 另一可选项为 true (1.x.x 版本新增配置项)。</li>
+<li>title: 该页面的标题。</li>
+<li>quote: 写在页面开头的一段话，支持 html 语法。</li>
+<li>timeout: 爬取数据的超时时间，默认是 10000ms , 如果在使用时发现报了超时的错 (ETIMEOUT) 可以把这个数据设置的大一点。</li>
+</ul>
+<p>​       如果只想显示某一个页面 (比如 movie)，那就把其他的配置项注释掉即可。</p>
+</blockquote>
+<p>然后在Git Bash中分别输入以下命令</p>
+<pre tabindex="0"><code>hexo clean
+hexo douban -bgm
+hexo g
+hexo s
+</code></pre><blockquote>
+<p>在<code>hexo douban -bgm</code>命令中，bgm代表的是book、game、movie三个参数，如果只需要其中的一部分就只要带你想要的那些参数</p>
+<p>注意：由于<code>hexo douban</code>的简写也是<code>hexo d</code>，与<code>hexo deploy</code>的简写指令<code>hexo d</code>冲突，因此在进行二者部署的时候，都只能打全名而不能打简写模式</p>
+</blockquote>
+<p>上面都没问题之后，只需要在站点目录下测试<code>http://localhost:4000/books</code>或者<code>https://localhost:4000/movies</code>，如果看到页面就说明成功了。</p>
+<p>然后在菜单栏添加按钮，打开<code>next.yml</code>，找到菜单按钮，添加下面内容：</p>
+<pre tabindex="0"><code>menu:
+  movies: /movies/ || film
+  books: /books/ || book
+</code></pre><p>然后在<code>language.yml</code>中添加对应的中文参数信息：</p>
+<pre tabindex="0"><code>menu:
+  movies: 观影
+  books: 阅读
+</code></pre><p>至此，我们就完成了豆瓣读书页面的添加。</p>
+<h3 id="开启评论功能">开启评论功能</h3>
+<p>这里使用Valine评论服务，还有很多其他的途径，可以自行选用。</p>
+<p>首先注册<a href="https://www.leancloud.cn/">LeanCloud</a>账号。</p>
+<p>注册完以后创建一个应用，进入应用—&gt;设置—&gt;应用key，得到appid、appkey。</p>
+<blockquote>
+<p>注册完以后需要创建一个应用，然后 <strong>进入应用 -&gt; 设置 -&gt; 应用 key</strong>，得到 appid、appkey。</p>
+<p>在 <code>LeanCloud -&gt; 存储 -&gt; 创建Class -&gt; 无限制的Class</code>，class 名称为：Comment，这是用来存放评论信息的。</p>
+<p>在 <code>LeanCloud-设置</code>，把除<strong>数据存储</strong>外其他选项都关闭。</p>
+<p>注意：我们需要在 <code>Leancloud -&gt; 设置 -&gt; 安全中心 -&gt; Web 安全域名</code>把你的域名加进去。</p>
+</blockquote>
+<p>然后在<code>next.yml</code>中进行配置：</p>
+<pre tabindex="0"><code># Valine
+# You can get your appid and appkey from https://leancloud.cn
+# More info available at https://valine.js.org
+valine:
+  enable: true # When enable is set to be true, leancloud_visitors is recommended to be closed for the re-initialization problem within different leancloud adk version.
+  appid:  # your leancloud application appid  # 填入上一步得到的appid
+  appkey:  # your leancloud application appkey  # 以及appkey
+  notify: true # mail notifier, See: https://github.com/xCss/Valine/wiki
+  verify: false # Verification code
+  placeholder: &#39;ヾﾉ≧∀≦)o来啊，快活啊!&#39; # comment box placeholder
+  avatar: mm # gravatar style
+  guest_info: nick,mail,link # custom comment header
+  pageSize: 10 # pagination size
+  language: zh-cn # language, available values: en, zh-cn
+  visitor: true # leancloud-counter-security is not supported for now. When visitor is set to be true, appid and appkey are recommended to be the same as leancloud_visitors&#39; for counter compatibility. Article reading statistic https://valine.js.org/visitor.html
+  comment_count: true # if false, comment count will only be displayed in post page, not in home page
+</code></pre><h3 id="开启cdn加速">开启CDN加速</h3>
+<p>由于GitHub的服务器在国外，所以可能会出现网站访问速度较慢的问题，这里我们采用配置CDN加速的方法来解决这个问题。</p>
+<p>首先注册一个<a href="https://www.cloudflare.com/">Cloudflare</a>账号，然后点击<code>Add site</code>添加你的域名，选择免费的选项，或者也可以选择付费选项，充钱使你变强。</p>
+<p>然后点击<code>Scan DNS Records</code>，等待扫描完成。即使没有扫到DNS记录也没有关系，我们可以自己添加，只需要添加如下图所示：</p>
+<p><img src="https://raw.githubusercontent.com/fuwuqiru/image/master/images/2020_0720200710220929.png" alt=""></p>
+<p>然后Cloudflare会要求将你的DNS服务器替换成他提供的，我们只需要去域名商哪里设置一下即可。</p>
+<p>以阿里云为例，进入控制台，进入域名列表，点击管理，在左侧菜单中点击DNS修改，完成修改。</p>
+<p>DNS修改完成后可以点击<code>Recheck Nameservers</code>来复查是否正确设置。</p>
+<p>然后过个几分钟，显示<code>Great news! Cloudflare is now protecting your site</code>就说明设置成功。</p>
+<h3 id="鼠标点击特效">鼠标点击特效</h3>
+<p>在<code>_data</code>目录下新建<code>body-end.swig</code>文件，输入以下代码：</p>
+<pre tabindex="0"><code>{# 鼠标点击特效 #}
+{% if theme.cursor_effect == &#34;fireworks&#34; %}
+  &lt;script async src=&#34;https://fuwuqiru.github.io/js/cursor/fireworks.js&#34;&gt;&lt;/script&gt;
+{% elseif theme.cursor_effect == &#34;explosion&#34; %}
+  &lt;canvas class=&#34;fireworks&#34; style=&#34;position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;&#34; &gt;&lt;/canvas&gt;
+  &lt;script src=&#34;//cdn.bootcss.com/animejs/2.2.0/anime.min.js&#34;&gt;&lt;/script&gt;
+  &lt;script async src=&#34;https://fuwuqiru.github.io/js/cursor/explosion.min.js&#34;&gt;&lt;/script&gt;
+{% elseif theme.cursor_effect == &#34;love&#34; %}
+  &lt;script async src=&#34;https://fuwuqiru.github.io/js/cursor/love.min.js&#34;&gt;&lt;/script&gt;
+{% elseif theme.cursor_effect == &#34;text&#34; %}
+  &lt;script async src=&#34;https://fuwuqiru.github.io/js/cursor/text.js&#34;&gt;&lt;/script&gt;
+{% endif %}
+</code></pre><p>然后在<code>next.yml</code>中取消<code>body-end.swig</code>的注释。</p>
+<p>然后在<code>next.yml</code>中增加如下配置项。</p>
+<pre tabindex="0"><code># 鼠标点击特效
+# mouse click effect: fireworks | explosion | love | text
+cursor_effect: fireworks  # 可以在这里切换特效
+</code></pre><p>然后在<code>blog/source</code>目录下新建<code>js</code>文件夹。</p>
+<p>讲以下四个<code>js</code>文件放入文件夹中。</p>
+<p>礼花特效：</p>
+<pre tabindex="0"><code>class Circle {
+  constructor({ origin, speed, color, angle, context }) {
+    this.origin = origin
+    this.position = { ...this.origin }
+    this.color = color
+    this.speed = speed
+    this.angle = angle
+    this.context = context
+    this.renderCount = 0
+  }
+
+  draw() {
+    this.context.fillStyle = this.color
+    this.context.beginPath()
+    this.context.arc(this.position.x, this.position.y, 2, 0, Math.PI * 2)
+    this.context.fill()
+  }
+
+  move() {
+    this.position.x = (Math.sin(this.angle) * this.speed) + this.position.x
+    this.position.y = (Math.cos(this.angle) * this.speed) + this.position.y + (this.renderCount * 0.3)
+    this.renderCount++
+  }
+}
+
+class Boom {
+  constructor ({ origin, context, circleCount = 16, area }) {
+    this.origin = origin
+    this.context = context
+    this.circleCount = circleCount
+    this.area = area
+    this.stop = false
+    this.circles = []
+  }
+
+  randomArray(range) {
+    const length = range.length
+    const randomIndex = Math.floor(length * Math.random())
+    return range[randomIndex]
+  }
+
+  randomColor() {
+    const range = [&#39;8&#39;, &#39;9&#39;, &#39;A&#39;, &#39;B&#39;, &#39;C&#39;, &#39;D&#39;, &#39;E&#39;, &#39;F&#39;]
+    return &#39;#&#39; + this.randomArray(range) + this.randomArray(range) + this.randomArray(range) + this.randomArray(range) + this.randomArray(range) + this.randomArray(range)
+  }
+
+  randomRange(start, end) {
+    return (end - start) * Math.random() + start
+  }
+
+  init() {
+    for(let i = 0; i &lt; this.circleCount; i++) {
+      const circle = new Circle({
+        context: this.context,
+        origin: this.origin,
+        color: this.randomColor(),
+        angle: this.randomRange(Math.PI - 1, Math.PI + 1),
+        speed: this.randomRange(1, 6)
+      })
+      this.circles.push(circle)
+    }
+  }
+
+  move() {
+    this.circles.forEach((circle, index) =&gt; {
+      if (circle.position.x &gt; this.area.width || circle.position.y &gt; this.area.height) {
+        return this.circles.splice(index, 1)
+      }
+      circle.move()
+    })
+    if (this.circles.length == 0) {
+      this.stop = true
+    }
+  }
+
+  draw() {
+    this.circles.forEach(circle =&gt; circle.draw())
+  }
+}
+
+class CursorSpecialEffects {
+  constructor() {
+    this.computerCanvas = document.createElement(&#39;canvas&#39;)
+    this.renderCanvas = document.createElement(&#39;canvas&#39;)
+
+    this.computerContext = this.computerCanvas.getContext(&#39;2d&#39;)
+    this.renderContext = this.renderCanvas.getContext(&#39;2d&#39;)
+
+    this.globalWidth = window.innerWidth
+    this.globalHeight = window.innerHeight
+
+    this.booms = []
+    this.running = false
+  }
+
+  handleMouseDown(e) {
+    const boom = new Boom({
+      origin: { x: e.clientX, y: e.clientY },
+      context: this.computerContext,
+      area: {
+        width: this.globalWidth,
+        height: this.globalHeight
+      }
+    })
+    boom.init()
+    this.booms.push(boom)
+    this.running || this.run()
+  }
+
+  handlePageHide() {
+    this.booms = []
+    this.running = false
+  }
+
+  init() {
+    const style = this.renderCanvas.style
+    style.position = &#39;fixed&#39;
+    style.top = style.left = 0
+    style.zIndex = &#39;999999999999999999999999999999999999999999&#39;
+    style.pointerEvents = &#39;none&#39;
+
+    style.width = this.renderCanvas.width = this.computerCanvas.width = this.globalWidth
+    style.height = this.renderCanvas.height = this.computerCanvas.height = this.globalHeight
+
+    document.body.append(this.renderCanvas)
+
+    window.addEventListener(&#39;mousedown&#39;, this.handleMouseDown.bind(this))
+    window.addEventListener(&#39;pagehide&#39;, this.handlePageHide.bind(this))
+  }
+
+  run() {
+    this.running = true
+    if (this.booms.length == 0) {
+      return this.running = false
+    }
+
+    requestAnimationFrame(this.run.bind(this))
+
+    this.computerContext.clearRect(0, 0, this.globalWidth, this.globalHeight)
+    this.renderContext.clearRect(0, 0, this.globalWidth, this.globalHeight)
+
+    this.booms.forEach((boom, index) =&gt; {
+      if (boom.stop) {
+        return this.booms.splice(index, 1)
+      }
+      boom.move()
+      boom.draw()
+    })
+    this.renderContext.drawImage(this.computerCanvas, 0, 0, this.globalWidth, this.globalHeight)
+  }
+}
+
+const cursorSpecialEffects = new CursorSpecialEffects()
+cursorSpecialEffects.init()
+</code></pre><p>爆炸特效：</p>
+<pre tabindex="0"><code>&#34;use strict&#34;;function updateCoords(e){pointerX=(e.clientX||e.touches[0].clientX)-canvasEl.getBoundingClientRect().left,pointerY=e.clientY||e.touches[0].clientY-canvasEl.getBoundingClientRect().top}function setParticuleDirection(e){var t=anime.random(0,360)*Math.PI/180,a=anime.random(50,180),n=[-1,1][anime.random(0,1)]*a;return{x:e.x+n*Math.cos(t),y:e.y+n*Math.sin(t)}}function createParticule(e,t){var a={};return a.x=e,a.y=t,a.color=colors[anime.random(0,colors.length-1)],a.radius=anime.random(16,32),a.endPos=setParticuleDirection(a),a.draw=function(){ctx.beginPath(),ctx.arc(a.x,a.y,a.radius,0,2*Math.PI,!0),ctx.fillStyle=a.color,ctx.fill()},a}function createCircle(e,t){var a={};return a.x=e,a.y=t,a.color=&#34;#F00&#34;,a.radius=.1,a.alpha=.5,a.lineWidth=6,a.draw=function(){ctx.globalAlpha=a.alpha,ctx.beginPath(),ctx.arc(a.x,a.y,a.radius,0,2*Math.PI,!0),ctx.lineWidth=a.lineWidth,ctx.strokeStyle=a.color,ctx.stroke(),ctx.globalAlpha=1},a}function renderParticule(e){for(var t=0;t&lt;e.animatables.length;t++)e.animatables[t].target.draw()}function animateParticules(e,t){for(var a=createCircle(e,t),n=[],i=0;i&lt;numberOfParticules;i++)n.push(createParticule(e,t));anime.timeline().add({targets:n,x:function(e){return e.endPos.x},y:function(e){return e.endPos.y},radius:.1,duration:anime.random(1200,1800),easing:&#34;easeOutExpo&#34;,update:renderParticule}).add({targets:a,radius:anime.random(80,160),lineWidth:0,alpha:{value:0,easing:&#34;linear&#34;,duration:anime.random(600,800)},duration:anime.random(1200,1800),easing:&#34;easeOutExpo&#34;,update:renderParticule,offset:0})}function debounce(e,t){var a;return function(){var n=this,i=arguments;clearTimeout(a),a=setTimeout(function(){e.apply(n,i)},t)}}var canvasEl=document.querySelector(&#34;.fireworks&#34;);if(canvasEl){var ctx=canvasEl.getContext(&#34;2d&#34;),numberOfParticules=30,pointerX=0,pointerY=0,tap=&#34;mousedown&#34;,colors=[&#34;#FF1461&#34;,&#34;#18FF92&#34;,&#34;#5A87FF&#34;,&#34;#FBF38C&#34;],setCanvasSize=debounce(function(){canvasEl.width=2*window.innerWidth,canvasEl.height=2*window.innerHeight,canvasEl.style.width=window.innerWidth+&#34;px&#34;,canvasEl.style.height=window.innerHeight+&#34;px&#34;,canvasEl.getContext(&#34;2d&#34;).scale(2,2)},500),render=anime({duration:1/0,update:function(){ctx.clearRect(0,0,canvasEl.width,canvasEl.height)}});document.addEventListener(tap,function(e){&#34;sidebar&#34;!==e.target.id&amp;&amp;&#34;toggle-sidebar&#34;!==e.target.id&amp;&amp;&#34;A&#34;!==e.target.nodeName&amp;&amp;&#34;IMG&#34;!==e.target.nodeName&amp;&amp;(render.play(),updateCoords(e),animateParticules(pointerX,pointerY))},!1),setCanvasSize(),window.addEventListener(&#34;resize&#34;,setCanvasSize,!1)}
+</code></pre><p>浮出爱心特效：</p>
+<pre tabindex="0"><code>!function(e,t,a){function n(){c(&#34;.heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: &#39;&#39;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}&#34;),o(),r()}function r(){for(var e=0;e&lt;d.length;e++)d[e].alpha&lt;=0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+=.004,d[e].alpha-=.013,d[e].el.style.cssText=&#34;left:&#34;+d[e].x+&#34;px;top:&#34;+d[e].y+&#34;px;opacity:&#34;+d[e].alpha+&#34;;transform:scale(&#34;+d[e].scale+&#34;,&#34;+d[e].scale+&#34;) rotate(45deg);background:&#34;+d[e].color+&#34;;z-index:99999&#34;);requestAnimationFrame(r)}function o(){var t=&#34;function&#34;==typeof e.onclick&amp;&amp;e.onclick;e.onclick=function(e){t&amp;&amp;t(),i(e)}}function i(e){var a=t.createElement(&#34;div&#34;);a.className=&#34;heart&#34;,d.push({el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()}),t.body.appendChild(a)}function c(e){var a=t.createElement(&#34;style&#34;);a.type=&#34;text/css&#34;;try{a.appendChild(t.createTextNode(e))}catch(t){a.styleSheet.cssText=e}t.getElementsByTagName(&#34;head&#34;)[0].appendChild(a)}function s(){return&#34;rgb(&#34;+~~(255*Math.random())+&#34;,&#34;+~~(255*Math.random())+&#34;,&#34;+~~(255*Math.random())+&#34;)&#34;}var d=[];e.requestAnimationFrame=function(){return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e){setTimeout(e,1e3/60)}}(),n()}(window,document);
+</code></pre><p>浮出文字特效：</p>
+<pre tabindex="0"><code>var a_idx = 0;
+jQuery(document).ready(function($) {
+  $(&#34;body&#34;).click(function(e) {
+    var a = new Array(&#34;喜欢我&#34;, &#34;不喜欢我&#34;);
+    var $i = $(&#34;&lt;span/&gt;&#34;).text(a[a_idx]);
+    var x = e.pageX,
+    y = e.pageY;
+    $i.css({
+      &#34;z-index&#34;: 99999,
+      &#34;top&#34;: y - 28,
+      &#34;left&#34;: x - a[a_idx].length * 8,
+      &#34;position&#34;: &#34;absolute&#34;,
+      &#34;color&#34;: &#34;#ff7a45&#34;
+    });
+    $(&#34;body&#34;).append($i);
+    $i.animate({
+      &#34;top&#34;: y - 180,
+      &#34;opacity&#34;: 0
+    }, 1500, function() {
+      $i.remove();
+    });
+    a_idx = (a_idx + 1) % a.length;
+  });
+});
+</code></pre>]]></content>
+        </item>
+        
+        <item>
+            <title>HEXO建站指南</title>
+            <link>https://fuwuqiru.github.io/posts/2023/12/hexo%E5%BB%BA%E7%AB%99%E6%8C%87%E5%8D%97/</link>
+            <pubDate>Fri, 29 Dec 2023 14:08:18 +0800</pubDate>
+            
+            <guid>https://fuwuqiru.github.io/posts/2023/12/hexo%E5%BB%BA%E7%AB%99%E6%8C%87%E5%8D%97/</guid>
+            <description>&lt;p&gt;之前一直有自己写个博客的想法，但是因为拖延症的原因一直延误至今，暑假的时候花了半天时间研究了一下，发现有很成熟的解决方案，静态博客用html+css写的话十分方便，于是就建了自己的第一个博客网站，中间也踩了一些坑，把整个过程写在下面。&lt;/p&gt;
+&lt;p&gt;(ps：建好博客之后，我拖了半个月才开始写这第一篇博客:))&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<p>之前一直有自己写个博客的想法，但是因为拖延症的原因一直延误至今，暑假的时候花了半天时间研究了一下，发现有很成熟的解决方案，静态博客用html+css写的话十分方便，于是就建了自己的第一个博客网站，中间也踩了一些坑，把整个过程写在下面。</p>
+<p>(ps：建好博客之后，我拖了半个月才开始写这第一篇博客:))</p>
+<h3 id="hexo">HEXO</h3>
+<p><a href="https://hexo.io/zh-cn/">hexo</a>是一款基于Node.js的快速、简洁且高效的博客框架，倚赖少，易于安装使用，可以方便地生成静态网页托管在GitHub或者其他网站上，或者放在自己的服务器上，是比较方便的博客框架。</p>
+<h3 id="购买域名">购买域名</h3>
+<p>搭建博客首先需要一个域名，作为你博客的入口。常见的有.com, .cn等后缀，越主流的后缀价格越高，略冷僻一点的域名后缀如.xyz，.icu等价格就十分低廉，简直是白菜价。如果你想把你的博客放在国内的服务器上，就需要将域名进行备案。这里我们选择将博客托管在GitHub上，由于GitHub的服务器在美国，这样就不需要对域名进行备案。</p>
+<p>申请域名的地方有很多，我是在<a href="https://www.aliyun.com/">阿里云</a>申请的域名，也可以自行在其他地方申请，根据实际情况选择。域名是整个建站过程中唯一需要花钱的地方，其他步骤均不需要。</p>
+<h3 id="github创建仓库">GitHub创建仓库</h3>
+<p>如果你没有<a href="https://GitHub.com/">GitHub</a>账号，使用你的邮箱注册GitHub。然后登录到GitHub，点击页面左侧的New repository创建一个新的仓库，仓库名为  用户名.GitHub.io，这里的用户名为你的GitHub账户名称，这样建立仓库之后，你就可以通过直接访问  用户名.GitHub.io  来访问你的博客。</p>
+<h3 id="安装git">安装Git</h3>
+<p>Git是一种开源的分布式版本控制系统，用于高效敏捷地处理项目。在本地搭建好博客之后，需要通过Git同步到GitHub上，想要详细了解Git，可以参见<a href="https://www.liaoxuefeng.com/wiki/896043488029600">廖雪峰老师的Git教程</a>。从Git官网下载<a href="https://git-scm.com/download/win">Git安装包</a>，下载后安装。安装完成后，在命令行中输入git测试是否安装成功。</p>
+<p>安装成功后，将你的Git和你的GitHub账号绑定，鼠标右击打开Git Bash Here，设置配置信息。</p>
+<p>首先输入你的用户名</p>
+<pre tabindex="0"><code>git config --global user.name &#34;你的GitHub用户名&#34;
+</code></pre><p>然后输入邮箱地址</p>
+<pre tabindex="0"><code>git config --global user.email &#34;你的GitHub注册邮箱&#34;
+</code></pre><p>这两行代码每次推送时都是调用，用来确定推送者的身份信息。</p>
+<p>生成ssh密钥文件</p>
+<pre tabindex="0"><code>ssh-keygen -t rsa -C &#34;你的GitHub注册邮箱&#34;
+</code></pre><p>直接三个回车即可，默认不需要设置密码。</p>
+<p>然后在找到生成的.ssh文件夹中的id_rsa.pub密钥(若找不到说明生成失败，请重复本步内容)，将内容全部复制</p>
+<p>打开<a href="https://github.com/settings/keys">GitHub_Settings_keys</a>，新建new SSH Key</p>
+<p>Title为标题，任意填写，将刚刚复制的id_rsa.pub内容粘贴进去，然后点击Add SSH key。</p>
+<p>在Git Bash中检测GitHub公钥设置是否成功</p>
+<pre tabindex="0"><code>ssh git@github.com
+</code></pre><p>这里设置GitHub密钥的原因为，通过非对称加密的公钥和私钥来完成加密，公钥放置在GitHub上，私钥放置在自己的电脑里。GitHub每次推送都要求是合法用户，所以每次推送都需要输入账号密码验证推送用户是否为合法用户。</p>
+<p>为了省去每次输密码的步骤，采用了ssh。当你推送的时候，git就会匹配你的私钥和GitHub上的公钥是否匹配，若是匹配就认为你是合法用户，则允许推送。这样就保证每次的推送都是正确合法的。</p>
+<h3 id="安装nodejs">安装Node.js</h3>
+<p>Hexo基于Node.js，Node.js下载地址：<a href="https://nodejs.org/en/download/">Download | Node.js</a>下载安装包，注意安装Node.js会包含环境变量以及npm的安装。安装后，检测Node.js是否安装成功，在命令行中输入</p>
+<pre tabindex="0"><code>node -v
+</code></pre><p>检测npm是否安装成功</p>
+<p><img src="https://raw.githubusercontent.com/fuwuqiru/image/master/images/2020_0720200708185619.png" alt=""></p>
+<p>在命令行中输入</p>
+<pre tabindex="0"><code>npm -v
+</code></pre><p><img src="https://raw.githubusercontent.com/fuwuqiru/image/master/images/2020_0720200708185705.png" alt=""></p>
+<p>至此为止，安装Hexo的环境已经全部搭建完成</p>
+<h3 id="安装hexo">安装Hexo</h3>
+<p>Hexo就是我们的个人博客网站的框架，这里需要自己在电脑里创建一个文件夹，可以命名为Blog。Hexo框架与以后你自己发布的网页都在这个文件夹中。创建好后，进入文件夹中，右键Git Bash Here</p>
+<p>使用npm命令安装Hexo，输入</p>
+<pre tabindex="0"><code>npm install hexo-cli -g
+</code></pre><p>安装完成后，初始化博客，输入</p>
+<pre tabindex="0"><code>hexo init blog
+</code></pre><p>注意，这里的命令都是作用在刚刚创建的Blog文件夹中。</p>
+<p>为了检测我们的网站雏形，分别按顺序输入一下三条命令</p>
+<pre tabindex="0"><code>hexo new test_my_site
+
+hexo g
+
+hexo s
+</code></pre><p>这些命令在后面作介绍，完成后，打开浏览器输入网址：</p>
+<p>localhost:4000</p>
+<p>就可以看到我们的第一篇博客</p>
+<p>如果无法打开网页，可能是你电脑的4000端口被占用，换一个端口即可，端口号可以任意输入</p>
+<pre tabindex="0"><code>hexo s -p 2333
+</code></pre><p>现在来介绍常用的Hexo 命令</p>
+<p>npm install hexo -g #安装Hexo
+npm update hexo -g #升级
+hexo init #初始化博客</p>
+<p>命令简写
+hexo n &ldquo;我的博客&rdquo; == hexo new &ldquo;我的博客&rdquo; #新建文章
+hexo g == hexo generate #生成
+hexo s == hexo server #启动服务预览
+hexo d == hexo deploy #部署</p>
+<p>hexo server #Hexo会监视文件变动并自动更新，无须重启服务器
+hexo server -s #静态模式
+hexo server -p 5000 #更改端口
+hexo server -i 192.168.1.1 #自定义 IP
+hexo clean #清除缓存，若是网页正常情况下可以忽略这条命令</p>
+<p>刚刚的三个命令依次是新建一篇博客文章、生成网页、在本地预览的操作</p>
+<h3 id="推送网站">推送网站</h3>
+<p>上面的操作只是在本地预览，接下来要做的就是推送网站，让我们的网站可以让更多人访问。</p>
+<p>在此说明一下，在blog根目录里的_config.yml文件称为站点配置文件</p>
+<p>进入根目录里的themes文件夹，里面也有一个_config.yml文件，这个称为主题配置文件</p>
+<p>下一步将我们的Hexo与GitHub关联起来，打开站点配置文件_config.yml，拉到最后修改为：</p>
+<pre tabindex="0"><code>deploy:
+    type: git
+    repo: git@github.com:用户名/用户名.github.io.git
+    branch: master
+</code></pre><p>用户名即为GitHub账户名称，更改后保存站点配置文件。这一步其实就是给hexo d 这个命令做相应的配置，让hexo知道你要把blog部署在哪个位置，很显然，我们部署在我们GitHub的仓库里。</p>
+<p>最后安装Git部署插件，输入命令：</p>
+<pre tabindex="0"><code>npm install hexo-deployer-git --save
+</code></pre><p>然后分别输入三条命令</p>
+<pre tabindex="0"><code>hexo clean
+hexo d
+hexo g
+</code></pre><p>完成后，打开浏览器，输入放置博客的GitHub仓库路径，即用户名.github.io，这是博客已经上线，可以在网络上被访问。</p>
+<h3 id="绑定域名">绑定域名</h3>
+<p>虽然在网上可以访问我们的网站，但是网址是GitHub提供的  xxx.github.io  ，而我们想使用自己的个性化域名，这就需要绑定我们自己的域名。这里以阿里云为例，登录到阿里云，进入管理控制台的域名列表，找到你的个性化域名，进入解析，然后添加解析。</p>
+<p><img src="https://raw.githubusercontent.com/fuwuqiru/image/master/images/2020_07aliyun%E8%A7%A3%E6%9E%90.png" alt=""></p>
+<p>第一项记录值为你仓库的ip地址，在控制台中输入</p>
+<pre tabindex="0"><code>ping 用户名.github.io
+</code></pre><p>获得你的ip地址填进去，第二项记录值为你的仓库地址。</p>
+<p>然后登陆GitHub，进入到之前创建的仓库，点击settings，设置Custom domain, 输入你的域名</p>
+<p><img src="https://raw.githubusercontent.com/fuwuqiru/image/master/images/2020_0720200708185503.png" alt=""></p>
+<p>点击save保存。</p>
+<p>然后进入本地博客文件夹，进入blog、source目录下，创建一个记事本文件，输入你的域名，保存，命名为CNAME，注意保存为所有文件而不是txt文件。</p>
+<p>完成之后，进入 blog目录中，Git Bash Here ，输入</p>
+<pre tabindex="0"><code>hexo clean
+hexo g
+hexo d
+</code></pre><p>这时候打开浏览器在地址栏输入你的域名就会直接进入你搭建的网站。</p>
+<p>至此为止，一个简单的个性化博客框架就搭建完毕~</p>
+<p>如果你想要写博客的话，直接在Git Bash Here中输入：</p>
+<pre tabindex="0"><code>hexo new &#39;文章名称&#39;
+</code></pre><p>然后你就会发现在<code>blog/source/_posts</code>目录下生成了一个<code>.md</code>文件，这就是你的博客文件，打开文件以markdown语法输入内容即可。如果你先想将文章的一部分内容显示在主页中，可在任意位置插入<code>&lt;!--more--&gt;</code>即可。</p>
+<p>写好博客后，依次输入：</p>
+<pre tabindex="0"><code>hexo g
+hexo d
+</code></pre><p>这样就将你的博客内容推送到了网上，注意，推送可能存在一定的延迟，如果你发现网站内容没有刷新，稍作等待即可。</p>]]></content>
+        </item>
+        
+        <item>
+            <title>my_2021</title>
+            <link>https://fuwuqiru.github.io/posts/2023/12/my_2021/</link>
+            <pubDate>Fri, 29 Dec 2023 14:08:18 +0800</pubDate>
+            
+            <guid>https://fuwuqiru.github.io/posts/2023/12/my_2021/</guid>
+            <description>&lt;p&gt;2021是平平淡淡的一年，但是遇见了嘉然，所以2021又是幸运的&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<p>2021是平平淡淡的一年，但是遇见了嘉然，所以2021又是幸运的</p>
+<h3 id="工作">工作</h3>
+<p>毕业进了这家公司，上半年接受了一些原先认为很有挑战性的工作，事实上工作难度在我们组确实是数一数二的，上半年也很拼，因为原先的负责人去了其他组，我在基本毫无基础的情况下直接上手，还恰巧遇到忙季，忙到焦头烂额，最多的一个月加班100h，一年下来，算是驾轻就熟吧，这样看来也算是有提高。</p>
+<p>但事实证明，这些工作并没有给我带来正向收益，只是让我成为了一个十分好用的工具人，即使是月度优秀员工这种听起来厉害实际上只代表200块钱的荣誉都没给过我，而是当成了拉拢人心的工具（没错，200块，真是吝啬啊），这也让我在以后离职的时候不会有任何心理负担。</p>
+<p>其他也没什么好说的，公司本来做的就是垄断的业务，订单全靠人脉关系内定，所以事实上技术并不重要，产品也不重要，只要上面的老大没倒，公司就可以继续滋润地活下去。</p>
+<h3 id="健康">健康</h3>
+<p>首先是一些老问题，以前骨折的几个位置长歪了，导致不能顺畅受力，这个也就这样了，怎么都不会有多大改善</p>
+<p>然后是眼睛，右眼比较稳定，调节功能有些衰弱，可能靠视力训练可以改善一些，左眼问题很大，我之前怀疑是圆锥角膜，查过说没有问题，又怀疑是屈光参差，不过没有再查过，然后是散光最近好像加重了，晚上出门光源会有很长的拖影，还挺不舒服的</p>
+<p>牙齿就还好，几颗蛀牙一直没有处理，今年拔掉了三颗智齿，还剩一颗长歪的难度比较大，一直没有拔，另外有一颗牙齿有些松动，但是医生说问题不大，也就没有处理</p>
+<p>今年添了一些新问题，右肩打羽毛球的时候扭到了，关节有点扭伤，拍过核磁共振问题不大，医生说年轻人好得快，hiahia，年末的时候耳朵真菌感染，伴随耳鸣，现在真菌感染基本好了，可是耳鸣却如附骨之蛆挥之不去，可能有一天会突然很康复，也可能我会慢慢提高忍耐的阈值，知道无视它。</p>
+<p>另外尿酸还有点高，可恶，之前总是断断续续的脚痛，终于找到了原因</p>
+<p>以后身体上会有越来越多的问题，要早点学会与其共处，</p>
+<h3 id="投资">投资</h3>
+<p>首先是一次严重的亏损</p>
+<p>年初虚拟币高位补仓一把亏掉了半年的存款，也算是个教训吧，总要交学费的，趁没什么钱的时候交了也好，避免以后亏掉更多</p>
+<p>然后是A股的配置，年初的地产银行没有在高位出手，最后亏了一点出掉，上半年花销也比较大手大脚，倒是下半年存了一点钱，合理配置了一些板块，但是因为本金不够，又想要的太多，觉得这个板块也好，那个也好便宜，最终的成绩小亏了一点，2022争取能有20%的收益就心满意足了</p>
+<p>说起来我之前的投资理念非常激进，激进到再激进一点就要上杠杆去天台了，但是今天跟着一位前辈学到很多，现在的策略非常稳，稳到如果之前的我看到会鄙视的程度，且看着吧，反正总共也没多少钱，也就图一乐，多积攒点经验就算赚了</p>
+<h3 id="感情">感情</h3>
+<p>经历了一次非常失败的感情，失败到我怀疑自己被降了智</p>
+<p>也可能是我的心态太过糟糕，迫切寻求陪伴，导致了一场彻底失败的恋爱</p>
+<p>小天啊小天，可长点心吧</p>
+<h3 id="朋友">朋友</h3>
+<p>今年失去了一个朋友，新交了一个朋友</p>
+<p>先说说失去的吧，是本科同学，我一直给与非常高的评价，至少是我第一梯队的朋友，能力和人品都相当好（在我看来），本科时候经常联系，不过我一直耿耿于怀的一点是她总是放我鸽子。我这个人对朋友应该是相当好的，因为赠与这件事情可以给我很大的满足感。总之是我一个很好的朋友吧，至少在我的视角里是这样的。</p>
+<p>闹掰的原因呢也很简单，我经常喜欢在微博上说一些屁话，有时候情绪上头了还喜欢针砭时弊，也就是俗称的键盘政治。当时我呢，对货拉拉的案子十分愤慨，会转发一些相关的微博。我的好友看到了只有可能不太开心，然后经过一番交谈，这里又要提到我的另一个习惯，我能看出对方的倾向，有时候会顺着对方说，也不能说是在说谎，只是不会说一些与其对立的观点，因为我能完全预料到对面的反应，最后只会一地鸡毛，闹掰收场，我很不喜欢吵架，也不擅长吵架，所以会尽量避免和人对立（说实话这是个性格弱点，早晚要被淦一下然后性格反转）</p>
+<p>但是呢，就在我们愉快交谈的第二天，我又转发了一条微博，是说车莎莎的职业和她舅舅的关系，这条微博直接激怒了我的好友，然后直接删好友绝交了。并且将我说的话回敬给我：</p>
+<blockquote>
+<p>If two people have the same priors, and their posteriors for an event A are common knowledge, then these posteriors are equal.</p>
+</blockquote>
+<p>所以我被认为是彻底的虚伪，讽刺的是我一直标榜自己真诚</p>
+<p>然后五年的朋友就这样不欢而散了，终究还是一地鸡毛。</p>
+<hr>
+<p>可是吖，今年遇到了一个新的朋友</p>
+<p>超超超超超级可爱的阿刺，其实关注阿刺好久了，至少有两三年了，从她考研就开始关注了</p>
+<p>后来才变成了网友，看着阿刺每天在努力，在分享自己的情绪和收获</p>
+<p>觉得阿刺非常非常厉害，让我这种薪水小偷自惭形愧</p>
+<p>2022的目标就是争取成为阿刺这样厉害的人 ：）</p>
+<hr>
+<p>以及几个老朋友还是没什么变化</p>
+<p>几条老狗都在稳步进行自己的人生，有一个在俄罗斯哼哧瘪肚地读医，每年联系的次数不超过一只手</p>
+<p>但是关系非常稳定，可能这就是君子之交淡如水吧</p>
+<p>如果我叫他宝贝儿的时候他不叫我基佬就更好了</p>
+<h3 id="dota2">DOTA2</h3>
+<p>dota2应该是我人生中一个不算小的组成部分，毕竟在大二大三非常珍贵的时间里，竟然硬生生两年打了2000个小时的dota2，还是一个人打的，连个开黑的都没有，我真的佩服自己，从ti7看到ti10，也该结束了，总体来说ti应该还是电子竞技里面观赏性最高的比赛之一（ti10）除外</p>
+<p>ti10看完之后，我至少在被窝里哭了三个晚上，一边看一边哭，哭到凌晨三四点，ame是我非常喜欢的选手，我至今仍然认为他是非常优秀的选手，就算是在ti8反向波痛失冠军被千夫所指的时候，我都一直相信他，支持他。但是ti10看完之后，我觉得一切都没有意义了，这个比赛不值得拥有这么多玩家的喜爱和信任，让它就这样死掉吧</p>
+<p>曾经有多热爱，现在就有多痛恨，正如所有的暴黑都曾经是暴白</p>
+<p>应该把精力更多地放到经营自己的生活上了，再见，dota2</p>
+<h3 id="嘉然">嘉然</h3>
+<p>如果说2021有什么亮点的话，</p>
+<p>我非常感谢能够在2021的末尾遇见嘉然，一开始是喜欢嘉然，后来逐渐喜欢上asoul的所有人，</p>
+<p>嘉然、向晚、乃琳、珈乐、贝拉。</p>
+<p>非常诚实地说，如果不是他们选择了成为偶像，我可能永远都不会遇到像他们这样的女孩</p>
+<p>最甜甜甜的小草莓    嘉然</p>
+<p>我的傲娇大小姐    向晚</p>
+<p>不断成长的小糯米    乃琳</p>
+<p>东北软妹儿    珈乐</p>
+<p>还有可爱的憨憨    贝拉</p>
+<p>大概这就是追星吧，以前没有过这种经历，没想到20多了还像个小孩子一样追星</p>
+<p>无法描述到底是怎样的心情，但是看到她们就会很快乐</p>
+<p>就像是在谈一场甜甜的恋爱，却又不太一样</p>
+<p>能够在她们成为偶像的旅途上，陪她们一程</p>
+<p>真是太好了</p>
+<h3 id="flag">FLAG</h3>
+<p>2021非常睿智地没有立任何flag，2022不能再这样堕落下去了，小天啊小天</p>
+<p>就在这里随便立些flag吧</p>
+<ol>
+<li>现在体重是95kg左右，2022年争取减轻25kg，把体重降到70kg</li>
+</ol>
+<p>​		（其实178cm，95kg是完全可以接受的，问题是我体脂有点高，所以先减脂吧，先把体重降下去）</p>
+<ol start="2">
+<li>投资的收益率争取做到20%，可以拿出一小部分做风险投资，亏光也无所谓，总体能到20%就好了</li>
+<li>能够在2022年底拿出一份可以跳槽的简历</li>
+</ol>
+<h3 id="2022">2022</h3>
+<p>Hi~ o(<em>￣▽￣</em>)ブ</p>]]></content>
+        </item>
+        
+        <item>
+            <title>关于Hexo推送异常的解决办法</title>
+            <link>https://fuwuqiru.github.io/posts/2023/12/%E5%85%B3%E4%BA%8Ehexo%E6%8E%A8%E9%80%81%E5%BC%82%E5%B8%B8%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</link>
+            <pubDate>Fri, 29 Dec 2023 14:08:18 +0800</pubDate>
+            
+            <guid>https://fuwuqiru.github.io/posts/2023/12/%E5%85%B3%E4%BA%8Ehexo%E6%8E%A8%E9%80%81%E5%BC%82%E5%B8%B8%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid>
+            <description>bug描述：博客本地预览正常，线上查看出现样式错误和样式缺失
+解决办法：清楚浏览器缓存，shift + F5强制刷新即可</description>
+            <content type="html"><![CDATA[<p>bug描述：博客本地预览正常，线上查看出现样式错误和样式缺失</p>
+<p>解决办法：清楚浏览器缓存，<code>shift + F5</code>强制刷新即可</p>
+]]></content>
         </item>
         
     </channel>

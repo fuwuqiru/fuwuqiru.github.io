@@ -5,7 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
-<meta name="description" content="建好网站之后第一件事是什么？写博客？no no no，当然是换皮肤啦~~~
+<meta name="description" content="如果博客中含大量图片，使用图床会明显提高加载速度。
+这里采用GitHub&#43;picgo的方法将GitHub作为一个免费图床，毕竟，谁不喜欢白嫖呢？
 " />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
@@ -37,17 +38,20 @@
 
 
 <meta itemprop="name" content="GitHub-picgo-设置免费图床">
-<meta itemprop="description" content="建好网站之后第一件事是什么？写博客？no no no，当然是换皮肤啦~~~"><meta itemprop="datePublished" content="2023-12-29T14:08:18+08:00" />
+<meta itemprop="description" content="如果博客中含大量图片，使用图床会明显提高加载速度。
+这里采用GitHub&#43;picgo的方法将GitHub作为一个免费图床，毕竟，谁不喜欢白嫖呢？"><meta itemprop="datePublished" content="2023-12-29T14:08:18+08:00" />
 <meta itemprop="dateModified" content="2023-12-29T14:08:18+08:00" />
-<meta itemprop="wordCount" content="723">
+<meta itemprop="wordCount" content="12">
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="GitHub-picgo-设置免费图床"/>
-<meta name="twitter:description" content="建好网站之后第一件事是什么？写博客？no no no，当然是换皮肤啦~~~"/>
+<meta name="twitter:description" content="如果博客中含大量图片，使用图床会明显提高加载速度。
+这里采用GitHub&#43;picgo的方法将GitHub作为一个免费图床，毕竟，谁不喜欢白嫖呢？"/>
 
 
 
     <meta property="og:title" content="GitHub-picgo-设置免费图床" />
-<meta property="og:description" content="建好网站之后第一件事是什么？写博客？no no no，当然是换皮肤啦~~~" />
+<meta property="og:description" content="如果博客中含大量图片，使用图床会明显提高加载速度。
+这里采用GitHub&#43;picgo的方法将GitHub作为一个免费图床，毕竟，谁不喜欢白嫖呢？" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://fuwuqiru.github.io/posts/2023/12/github-picgo-%E8%AE%BE%E7%BD%AE%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-12-29T14:08:18+08:00" />
@@ -125,7 +129,7 @@
           <circle cx="12" cy="12" r="10"></circle>
           <polyline points="12 6 12 12 16 14"></polyline>
         </svg>
-        4 minutes
+        One minute
 
         
       </p>
@@ -143,289 +147,19 @@
       
 
       <div class="post-content">
-        <p>建好网站之后第一件事是什么？写博客？no no no，当然是换皮肤啦~~~</p>
-<h3 id="安装next">安装NEXT</h3>
-<p>Hexo搭完框架之后显示的是默认主题，可以自行更换<a href="https://hexo.io/themes/">主题</a>。这里我选择的主题是NEXT，这款主题用的人比较多，所以如果你遇到什么问题，基本都可以在网上找到解决方案。</p>
-<p>进入blog文件夹，Git Bash Here，输入</p>
-<pre tabindex="0"><code>git clone https://github.com/theme-next/hexo-theme-next themes/next
-</code></pre><p>即可安装NEXT</p>
-<h3 id="设置hexo的next主题">设置Hexo的next主题</h3>
-<p>在站点配置文件_config.yml中找到theme后添加：</p>
-<pre tabindex="0"><code>theme: next  # 配置成刚下载的next主题
-</code></pre><h3 id="配置hexo网站相关信息">配置hexo网站相关信息</h3>
-<p>在站点配置文件_config.yml中修改：</p>
-<pre tabindex="0"><code># Site
-title:          # 网站标题
-subtitle:       # 网站副标题
-description:    # 描述，介绍网站的
-keywords:       # 网站的关键字
-author:         # 博主姓名
-language: zh-CN # 语言：zh-CN 是简体中文
-timezone: &#39;Asia/Shanghai&#39;   # 时区
-</code></pre><h3 id="主题配置">主题配置</h3>
-<p>next在配置主题的过程中通常会遇到的一个问题就是，next中间有过一次大版本更新，配置主题的方式发生了一些变化，譬如很多教程提到的为博客更换背景图片需要在文件夹_custom中操作，而更新后的next是没有这个文件夹的，这里介绍一下新版本next的配置方式。</p>
-<ol>
-<li>在hexo/source/_data目录创建next.yml(如果 _data不存在，则创建目录)。</li>
-<li>将blog/themes/next/config.yml 中的所有内容复制到 hexo/source/data/next.yml 中</li>
-<li>在next.yml中设置override选项为true</li>
-</ol>
-<p>之后所有的主题配置操作都在next.yml中完成。</p>
-<h4 id="配置菜单">配置菜单</h4>
-<p>默认的主题配置文件中，菜单只开启了首页和归档，我们根据需要，可以添加其他菜单，在配置文件中将对应选项取消注释即可。</p>
-<pre tabindex="0"><code># 菜单设置为 菜单名: /菜单目录 || 菜单图标名字
-menu:
-  home: / || home
-  about: /about/ || user
-  tags: /tags/ || tags
-  categories: /categories/ || th
-  archives: /archives/ || archive
-  #schedule: /schedule/ || calendar
-  sitemap: /sitemap.xml || sitemap
-  commonweal: /404/ || heartbeat
-
-menu_settings:
-  icons: true   # 显示图标
-  badges: true  # 显示统计信息
-</code></pre><p>注：hexo所有图标均来自<a href="https://fontawesome.com/6?next=%2F">fontawesome</a>，其中 | | 后面是你想要设置的图标的名字，如果你想要更换图标，可以在网站上搜索你想要的图标，替换相应名称即可。</p>
-<h4 id="手动生成hexo菜单对应文件">手动生成hexo菜单对应文件</h4>
-<p>新菜单开启后是没有对应文件的，所以要手动生成about、tags、categories、404等页面。</p>
-<h5 id="新建about页面">新建<code>about</code>页面</h5>
-<p><code>about</code>页面一般用来介绍站点信息和博主信息。</p>
-<p>我们可以输入以下命令新建页面</p>
-<pre tabindex="0"><code>hexo new page about
-</code></pre><p>然后你就会发现多了一个hexo / source / about 文件夹，里面有一个<code>index.md</code>文件，你可以根据自己的需要在这个Markdown文件中写一些内容（同文章一样，用Markdown语法）。</p>
-<h5 id="新建一个tags页面">新建一个<code>tags</code>页面</h5>
-<p>同样的，我们也可以新建 <code>tags</code> 页面：</p>
-<pre tabindex="0"><code>hexo new page tags
-</code></pre><p>在 <code>tags</code> 页面文件 <code>hexo / source / tags / index.md</code>的头部修改为：</p>
-<pre tabindex="0"><code>---
-title: 标签
-date: 2019-06-29 11:35:42   # 时间随意
-type: &#34;tags&#34;                # 类型一定要为tags
-comments: false             # 提示这个页面不需要加载评论
----
-</code></pre><h5 id="新建一个categories页面">新建一个<code>categories</code>页面</h5>
-<p>同样的，我们可以新建<code>categories</code>页面：</p>
-<pre tabindex="0"><code>hexo new page categories
-</code></pre><p>在<code>categories</code>页面文件 <code>hexo / source / categories / index.md</code> 的头部修改为：</p>
-<pre tabindex="0"><code>---
-title: 文章分类
-date: 2018-10-15 00:03:57
-type: &#34;categories&#34;
-comments: false
----
-</code></pre><h5 id="新建一个404页面">新建一个404页面</h5>
-<p>这里我们将 404 替换成腾讯的公益页面。</p>
-<p>首先我们在 <code>hexo / source</code>目录下创建自己的<code>404.html</code>：</p>
-<pre tabindex="0"><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&#34;en&#34;&gt;
-    &lt;head&gt;
-        &lt;meta charset=&#34;UTF-8&#34;&gt;
-        &lt;title&gt;404&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;script type=&#34;text/javascript&#34; src=&#34;//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js&#34; charset=&#34;utf-8&#34; homePageUrl=&#34;/&#34; homePageName=&#34;返回&#34;&gt;&lt;/script&gt; 
-    &lt;/body&gt;
-&lt;/html&gt;
-</code></pre><blockquote>
-<p>注意：Hexo 博客的基本内容是一些 Markdown 文件，放在 <code>source/_post</code> 文件夹下，每个文件对应一篇文章。除此之外，放在 source 文件夹下的所有开头不是下划线的文件，在 <code>hexo generate</code> 的时候，都会被拷贝到 public 文件夹下。但是，Hexo 默认会渲染所有的 HTML 和 Markdown 文件。</p>
-</blockquote>
-<p>因此我们可以简单地在开头加上<code>layout：false</code>一行来避免渲染。</p>
-<p>这样我们就完成了404页面的创建。</p>
-<p>注意：本地测试不出来，发不出来就可以了。</p>
-<h4 id="配置hexo本地搜索">配置hexo本地搜索</h4>
-<p>首先安装插件</p>
-<pre tabindex="0"><code>npm install hexo-generator-searchdb --save
-</code></pre><p>然后在站点配置文件<code>_config.yml</code>中添加以下内容</p>
-<pre tabindex="0"><code># 本地搜索
-search:
-  path: search.xml  # 索引文件的路径，相当于站点根目录
-  field: post  # 搜索范围，默认是post，还可以选择page、all，设置成all表示搜索所有界面
-  format: html
-  limit: 100  # 限制搜索的条目数
-</code></pre><p>然后修改主题配置文件</p>
-<pre tabindex="0"><code># Local Search
-# Dependencies: https://github.com/theme-next/hexo-generator-searchdb
-local_search:
-  enable: true
-  # If auto, trigger search by changing input.
-  # If manual, trigger search by pressing enter key or search button.
-  trigger: auto
-  # Show top n results per article, show all results by setting to -1
-  top_n_per_article: 1
-  # Unescape html strings to the readable one.
-  unescape: false
-  # Preload the search data when the page loads.
-  preload: false
-</code></pre><h4 id="配置博客底部显示信息">配置博客底部显示信息</h4>
-<p>通过修改<code>next.yml</code>中的<code>footer</code>选项可以修改底部开关显示hexo信息、theme信息、建站时间等个性化配置。</p>
-<pre tabindex="0"><code>footer:
-  since: 2018        # 建站开始时间
-  icon:
-    name: user       # 设置 建站初始时间和至今时间中间的图标，默认是一个&#39;小人像&#39;，更改user为heart可以变成一个心
-    animated: true
-    color: &#34;#808080&#34; # 更改图标的颜色，红色为&#39;#ff0000&#39;
-  powered:
-    enable: true     # 开启hexo驱动
-    version: true    # 开启hexo版本号
-  theme:
-    enable: true     # 开启主题驱动
-    version: true    # 开启主题版本号
-  custom_text: Hosted by &lt;a target=&#34;_blank&#34; rel=&#34;external nofollow&#34; href=&#34;https://pages.coding.me&#34;&gt;&lt;b&gt;Coding Pages&lt;/b&gt;&lt;/a&gt; # 这里的底部标识是为了添加coding page服务时的版权声明 打开注释就可以看到底部有一个 hosted by coding pages
-</code></pre><h4 id="配置hexo中next主题样式选择">配置hexo中next主题样式选择</h4>
-<p>NexT一共提供了4种首页样式可供选择，取消所选的主题样式前<code>#</code>号并注释掉其他样式即可。</p>
-<pre tabindex="0"><code># Schemes
-#scheme: Muse
-#scheme: Mist
-#scheme: Pisces
-scheme: Gemini
-</code></pre><h4 id="头像信息设置">头像信息设置</h4>
-<p>在<code>next.yml</code>中修改配置</p>
-<pre tabindex="0"><code>avatar:
-  url: /images/avatar.jpg  # 设置头像资源的位置
-  rounded: true            # 开启圆形头像
-  opacity: 1               # 不透明的比例：0就是完全透明
-  rotated: false           # 不开启旋转
-</code></pre><blockquote>
-<p>这里解释一下，博客中的图片资源有两种引用方式，一种是放在本地的<code>blog/themes/next/source/images</code>文件夹中，引用时填写存储路径即可。第二种方式是将图片上传到图床中，引用时填写图片的 url 。如果图片少的话可以放在本地，但是如果图片较多，就是导致网站打开速度变慢等问题，后面会介绍将GitHub作为图床的方法。</p>
-</blockquote>
-<h4 id="背景图片设置">背景图片设置</h4>
-<p>将你的背景图片放入上述的文件夹中，然后再<code>_data</code>目录下新建<code>styles.styl</code>文件，添加：</p>
-<pre tabindex="0"><code>body {
-    background:url(/images/yourbackground.jpg);  # 图片路径
-    background-repeat: no-repeat;  # 若背景图片不能全屏，那么是否平铺显示，充满屏幕
-    background-attachment:fixed;  # 背景是否随着网页上下滚动而滚动，fixed为固定
-    background-size: cover;  # 图片展示大小，这里设置为100%，若图片不能全屏，就会强制拉伸至全屏展示
-    background-position:50% 50%;
-}
-</code></pre><h4 id="博客内容透明化">博客内容透明化</h4>
-<p>在<code>styles.styl</code>中添加以下内容：</p>
-<pre tabindex="0"><code>//博客内容透明化
-//文章内容的透明度设置
-.content-wrap {
-  opacity: 0.9;
-}
-
-//侧边框的透明度设置
-.sidebar {
-  opacity: 0.9;
-}
-
-//菜单栏的透明度设置
-.header-inner {
-  background: rgba(255,255,255,0.9);
-}
-
-//搜索框（local-search）的透明度设置
-.popup {
-  opacity: 0.9;
-}
-</code></pre><blockquote>
-<p>注意，这里设置完之后要看一下<code>next.yml</code>中对应的选项是否已经取消注释，如果选项被注释掉的话，这里的配置文件是不会生效的。</p>
-</blockquote>
-<h4 id="社交信息">社交信息</h4>
-<p>和菜单设置格式一样，在<code>next.yml</code>中修改：</p>
-<pre tabindex="0"><code>social: 
-  GitHub: https://github.com/yourname || github
-  E-Mail: mailto:yourname@gmail.com || envelope
-  Google: https://plus.google.com/yourname || google
-
-social_icons:
-  enable: true      # 显示社交图标
-  icons_only: false # 只显示图标，不显示文字
-</code></pre><h4 id="首页文章属性">首页文章属性</h4>
-<pre tabindex="0"><code>post_meta:
-  item_text: false    # 设为true 可以一行显示，文章的所有属性
-  created_at: true    # 显示创建时间
-  updated_at:
-    enabled: true     # 显示修改的时间
-    another_day: true # 设true时，如果创建时间和修改时间一样则显示一个时间
-  categories: true    # 显示分类信息
-</code></pre><h4 id="页面阅读统计">页面阅读统计</h4>
-<pre tabindex="0"><code>busuanzi_count:
-  enable: false              # 设true 开启
-  total_visitors: true       # 总阅读人数（uv数）
-  total_visitors_icon: user  # 阅读总人数的图标
-  total_views: true          # 总阅读次数（pv数）
-  total_views_icon: eye      # 阅读总次数的图标
-  post_views: true           # 开启内容阅读次数
-  post_views_icon: eye       # 内容页阅读数的图标
-</code></pre><h4 id="字数统计阅读时长">字数统计、阅读时长</h4>
-<p>首先安装插件</p>
-<pre tabindex="0"><code>npm install hexo-symbols-count-time --save
-</code></pre><p>主题配置文件<code>next.yml</code>修改如下：</p>
-<pre tabindex="0"><code>symbols_count_time:
-  separated_meta: true  # false会显示一行
-  item_text_post: true  # 显示属性名称,设为false后只显示图标和统计数字,不显示属性的文字
-  item_text_total: true # 底部footer是否显示字数统计属性文字
-  awl: 4                # 计算字数的一个设置,没设置过
-  wpm: 275              # 一分钟阅读的字数
-</code></pre><p>站点配置文件<code>_config.yml</code>新增如下：</p>
-<pre tabindex="0"><code>symbols_count_time:
- #文章内是否显示
-  symbols: true
-  time: true
- # 网页底部是否显示
-  total_symbols: true
-  total_time: true
-</code></pre><h4 id="代码块复制按钮">代码块复制按钮</h4>
-<pre tabindex="0"><code>codeblock:
-  # Code Highlight theme
-  # Available values: normal | night | night eighties | night blue | night bright | solarized | solarized dark | galactic
-  # See: https://github.com/chriskempson/tomorrow-theme
-  highlight_theme: normal
-  # Add copy button on codeblock
-  copy_button:
-    enable: true  # 开启复制按钮
-    # Show text copy result.
-    show_result: true  # 显示复制结果
-    # Available values: default | flat | mac
-    style: default
-</code></pre><h4 id="中文翻译">中文翻译</h4>
-<p>这部分原来是在配置主题下的<code>language</code>目录中的<code>zh-CN.yml</code>文件来对菜单进行中文翻译的，现在在<code>hexo/source/_data/</code>下新建数据文件<code>language.yml</code>，配置如下：</p>
-<pre tabindex="0"><code>zh-CN: 
-  menu:
-    home: 首页
-    top: 热榜
-    archives: 归档
-    categories: 分类
-    tags: 标签
-    about: 关于
-    search: 搜索
-    schedule: 日程表
-    sitemap: 站点地图
-    commonweal: 公益 404
-    movies: 观影
-    books: 阅读
-</code></pre><blockquote>
-<p>如果后面新增添了别的菜单选项，可以在这里添加新的翻译</p>
-</blockquote>
-<h4 id="其他">其他</h4>
-<p>注意<code>next.yml</code>中的这一段代码</p>
-<pre tabindex="0"><code>custom_file_path:
-  #head: source/_data/head.swig
-  #header: source/_data/header.swig
-  sidebar: source/_data/sidebar.swig
-  #postMeta: source/_data/post-meta.swig
-  #postBodyEnd: source/_data/post-body-end.swig
-  footer: source/_data/footer.swig
-  bodyEnd: source/_data/body-end.swig
-  variable: source/_data/variables.styl
-  #mixin: source/_data/mixins.styl
-  style: source/_data/styles.styl
-</code></pre><p>这些配置原来都是在主题配置内完成的，版本更新后我们如果要修改相应配置，就新建相应的文件放在<code>_data</code>目录下，然后在这一段代码中取消相应的注释即可。</p>
-<h4 id="如圆角设置">如：圆角设置</h4>
-<p>在<code>_data</code>目录下新建<code>variables.styl</code>文件，在文件中添加：</p>
-<pre tabindex="0"><code>// 圆角设置
-$border-radius-inner     = 20px 20px 20px 20px;
-$border-radius           = 20px;
-</code></pre><p>然后取消<code>next.yml</code>中<code>variable</code>的注释。</p>
-<p>在设置圆角之后可能会出现左侧侧边栏出现白块的问题，解决方法为在<code>source/_data/styles.styl</code>中（若没有该文件则新建一个）添加如下代码：</p>
-<pre tabindex="0"><code>.sidebar {
-box-shadow: none
-background: none
-}
-</code></pre>
+        <p>如果博客中含大量图片，使用图床会明显提高加载速度。</p>
+<p>这里采用GitHub+picgo的方法将GitHub作为一个免费图床，毕竟，谁不喜欢白嫖呢？</p>
+<p>首先在GitHub中创建一个新的仓库，可以取名为images或者其他，仓库类型需要为<code>public</code>。</p>
+<p>点击头像选择<code>settings</code>，然后选择<code>Developer settings</code></p>
+<p>选择<code>Personal acess tokens</code>，生成一个新的token。</p>
+<p><img src="https://raw.githubusercontent.com/fuwuqiru/image/master/images/2020_0720200710223446.png" alt=""></p>
+<p>填写备注，勾选repo即可，提交后会生成一个新的token，记得保存下来，只会显示一次，后面配置Picgo要用到。</p>
+<p><img src="https://raw.githubusercontent.com/fuwuqiru/image/master/images/2020_0720200710223846.png" alt=""></p>
+<p>然后下载并安装<a href="https://github.com/Molunerfinn/picgo/releases">PicGo</a>，安装后运行界面如下：</p>
+<p><img src="https://raw.githubusercontent.com/fuwuqiru/image/master/images/2020_0720200710224031.png" alt=""></p>
+<p>然后点击图床设置，填写相应信息。</p>
+<p><img src="https://raw.githubusercontent.com/fuwuqiru/image/master/images/2020_0720200710224143.png" alt=""></p>
+<p>设置完成，这样将图片直接上传后相应<code>url</code>就会直接生成在剪切板中，直接复制即可。</p>
       </div>
     </article>
 
@@ -443,7 +177,7 @@ background: none
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        723 Words
+        12 Words
       </p>
 
       <p>
@@ -468,13 +202,6 @@ background: none
         
 
         <div class="pagination__buttons">
-            
-            <span class="button previous">
-                <a href="https://fuwuqiru.github.io/posts/2023/12/github-picgo-%E8%AE%BE%E7%BD%AE%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A/">
-                    <span class="button__icon">←</span>
-                    <span class="button__text">GitHub-picgo-设置免费图床</span>
-                </a>
-            </span>
             
 
             
