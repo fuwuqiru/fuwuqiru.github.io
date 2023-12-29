@@ -14,18 +14,6 @@
                 href="https://fuwuqiru.icu/fr/categories/"
                 />
   </url><url>
-    <loc>https://fuwuqiru.icu/fr/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://fuwuqiru.icu/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://fuwuqiru.icu/fr/"
-                />
-  </url><url>
     <loc>https://fuwuqiru.icu/fr/series/</loc>
     <xhtml:link
                 rel="alternate"
@@ -48,6 +36,18 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://fuwuqiru.icu/fr/tags/"
+                />
+  </url><url>
+    <loc>https://fuwuqiru.icu/fr/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://fuwuqiru.icu/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://fuwuqiru.icu/fr/"
                 />
   </url>
 </urlset>
