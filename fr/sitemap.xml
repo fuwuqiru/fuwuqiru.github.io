@@ -2,52 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://fuwuqiru.github.io/fr/categories/</loc>
+    <loc>https://fuwuqiru.icu/fr/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://fuwuqiru.github.io/categories/"
+                href="https://fuwuqiru.icu/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://fuwuqiru.github.io/fr/categories/"
+                href="https://fuwuqiru.icu/fr/categories/"
                 />
   </url><url>
-    <loc>https://fuwuqiru.github.io/fr/</loc>
+    <loc>https://fuwuqiru.icu/fr/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://fuwuqiru.github.io/"
+                href="https://fuwuqiru.icu/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://fuwuqiru.github.io/fr/"
+                href="https://fuwuqiru.icu/fr/"
                 />
   </url><url>
-    <loc>https://fuwuqiru.github.io/fr/series/</loc>
+    <loc>https://fuwuqiru.icu/fr/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://fuwuqiru.github.io/series/"
+                href="https://fuwuqiru.icu/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://fuwuqiru.github.io/fr/series/"
+                href="https://fuwuqiru.icu/fr/series/"
                 />
   </url><url>
-    <loc>https://fuwuqiru.github.io/fr/tags/</loc>
+    <loc>https://fuwuqiru.icu/fr/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://fuwuqiru.github.io/tags/"
+                href="https://fuwuqiru.icu/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://fuwuqiru.github.io/fr/tags/"
+                href="https://fuwuqiru.icu/fr/tags/"
                 />
   </url>
 </urlset>
